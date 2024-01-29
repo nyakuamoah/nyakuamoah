@@ -1,4 +1,4 @@
-Nana Yaw Akuamoah
+Data Analytics, Web Applications & ML Experiments
 linkedin.com/in/nyakuamoah
 
 
