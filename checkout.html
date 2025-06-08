@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audiophile | Checkout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html">audiophile</a>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarMain"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="headphones.html">Headphones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="speakers.html">Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="earphones.html">Earphones</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cart Icon -->
+        <div class="text-white position-relative ms-3">
+          <a
+            href="#"
+            class="text-white text-decoration-none position-relative fs-5"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+          >
+            🛒
+            <span
+              id="cart-count"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >0</span
+            >
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Checkout Form -->
+    <main class="container my-5">
+      <h2 class="mb-4">Checkout</h2>
+      <form id="checkoutForm" class="row g-4">
+        <!-- Billing Details -->
+        <div class="col-md-6">
+          <h6 class="text-uppercase text-warning fw-bold">Billing Details</h6>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" required />
+          </div>
+
+          <!-- Shipping Info -->
+          <h6 class="text-uppercase text-warning fw-bold mt-4">
+            Shipping Info
+          </h6>
+          <div class="mb-3">
+            <label for="address" class="form-label">Your Address</label>
+            <input type="text" class="form-control" id="address" required />
+          </div>
+          <div class="mb-3 d-flex gap-3">
+            <div class="w-50">
+              <label for="zip" class="form-label">ZIP Code</label>
+              <input type="text" class="form-control" id="zip" required />
+            </div>
+            <div class="w-50">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" required />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" class="form-control" id="country" required />
+          </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="col-md-6">
+          <h6 class="text-uppercase fw-bold">Summary</h6>
+          <div id="summary" class="bg-light p-4 rounded">
+            <!-- Populated by JS -->
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mt-3 text-uppercase"
+          >
+            Continue & Pay
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4 text-center">
+          <div class="mb-3">
+            <div
+              class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+              style="width: 50px; height: 50px"
+            >
+              <span class="fs-4">✔</span>
+            </div>
+          </div>
+          <h4 class="fw-bold text-uppercase">Thank you<br />for your order</h4>
+          <p class="text-muted">
+            You will receive an email confirmation shortly.
+          </p>
+
+          <div
+            class="d-flex my-4 rounded overflow-hidden border"
+            style="text-align: left"
+          >
+            <div class="bg-light p-3 w-50">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  src="./assets/cart/image-xx99-mark-two-headphones.jpg"
+                  style="width: 40px; border-radius: 8px"
+                  alt="Product"
+                />
+                <div class="ms-3">
+                  <p class="mb-0 fw-bold small">XX99 MK II</p>
+                  <p class="mb-0 text-muted small">$2,999 x1</p>
+                </div>
+              </div>
+              <p class="small text-center text-muted mb-0">
+                and 2 other item(s)
+              </p>
+            </div>
+            <div
+              class="bg-dark text-white p-3 w-50 d-flex flex-column justify-content-between"
+            >
+              <p class="small text-uppercase text-muted mb-1">Grand Total</p>
+              <p class="fw-bold fs-5" id="modal-grand-total">$5,446</p>
+            </div>
+          </div>
+          <a href="index.html" class="btn btn-primary w-100 text-uppercase"
+            >Back to Home</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4">
+      <div class="container">
+        <!-- Top Section -->
+        <div class="row align-items-center mb-6">
+          <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+            <a
+              href="index.html"
+              class="text-white text-decoration-none fw-bold fs-4"
+              >audiophile</a
+            >
+          </div>
+
+          <div class="col-md-6 text-md-end">
+            <nav style="text-transform: uppercase; font-size: small">
+              <a href="index.html" class="text-white text-decoration-none mx-2"
+                >Home</a
+              >
+              <a
+                href="headphones.html"
+                class="text-white text-decoration-none mx-2"
+                >Headphones</a
+              >
+              <a
+                href="speakers.html"
+                class="text-white text-decoration-none mx-2"
+                >Speakers</a
+              >
+              <a
+                href="earphones.html"
+                class="text-white text-decoration-none mx-2"
+                >Earphones</a
+              >
+            </nav>
+          </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="row mt-3">
+          <div class="col-md-6 text-md-start footer-text">
+            <p>
+              Audiophile is an all-in-one stop to fulfill your audio needs.
+              We're a small team of music lovers and sound specialists who are
+              devoted to helping you get the most out of personal audio. Come
+              and visit our demo facility — we’re open 7 days a week.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="align-items-bottom">
+              <a href="#" class="text-white text-decoration-none mx-1"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+              <a href="#" class="text-white text-decoration-none mx-1"
+                ><i class="bi bi-twitter fs-5"></i
+              ></a>
+              <a href="#" class="text-white text-decoration-none mx-1"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="row mt-3">
+          <div class="col-md-12 text-md-start footer-text">
+            <p>© 2025 Audiophile. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const summaryEl = document.getElementById("summary");
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function renderSummary() {
+        let subtotal = 0;
+        summaryEl.innerHTML = cart
+          .map((item) => {
+            subtotal += item.price * item.quantity;
+            return `
+          <div class="d-flex justify-content-between mb-2">
+            <span>${item.name} x${item.quantity}</span>
+            <span>$${item.price * item.quantity}</span>
+          </div>
+        `;
+          })
+          .join("");
+
+        const shipping = 50;
+        const vat = subtotal * 0.2;
+        const grand = subtotal + shipping;
+
+        summaryEl.innerHTML += `
+        <hr />
+        <div class="d-flex justify-content-between"><strong>Total</strong><span>$${subtotal}</span></div>
+        <div class="d-flex justify-content-between"><strong>Shipping</strong><span>$${shipping}</span></div>
+        <div class="d-flex justify-content-between"><strong>VAT (Included)</strong><span>$${vat.toFixed(
+          0
+        )}</span></div>
+        <div class="d-flex justify-content-between text-primary"><strong>Grand Total</strong><span>$${grand}</span></div>
+      `;
+
+        document.getElementById("modal-grand-total").textContent = `$${grand}`;
+      }
+
+      document
+        .getElementById("checkoutForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const modal = new bootstrap.Modal(
+            document.getElementById("orderModal")
+          );
+          modal.show();
+          localStorage.removeItem("cart");
+        });
+
+      renderSummary();
+    </script>
+  </body>
+</html>

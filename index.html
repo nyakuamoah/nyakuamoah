@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audiophile | Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold fs-4" href="index.html">audiophile</a>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMain"
+          aria-controls="navbarMain"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Links -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarMain"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-page="index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="headphones.html">Headphones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="speakers.html">Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="earphones.html">Earphones</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cart Icon -->
+        <div class="text-white position-relative ms-3">
+          <a
+            href="#"
+            class="text-white text-decoration-none position-relative fs-5"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+          >
+            🛒
+            <span
+              id="cart-count"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >0</span
+            >
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Homepage Banner -->
+    <section
+      class="banner text-white d-flex align-items-center"
+      style="
+        min-height: 600px;
+        background-color: #000;
+        background-image: url('./assets/home/desktop/image-hero.jpg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="container text-md-start">
+        <div class="row mt-10">
+          <div class="col-md-6 d-flex flex-column">
+            <p class="text-uppercase letter-spacing mb-2 mt-6">New Product</p>
+            <h1 class="display-5 fw-bold">XX99 Mark II Headphones</h1>
+            <p class="text-light mb-4">
+              Experience natural, lifelike audio and exceptional build quality
+              made for the passionate listener.
+            </p>
+            <a
+              href="product.html?slug=xx99-mark-two-headphones"
+              class="btn-primary"
+              >See Product</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="container py-5">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="category-card bg-light py-4 rounded">
+            <img
+              src="./assets/shared/desktop/image-category-thumbnail-headphones.png"
+              alt="Headphones"
+              class="img-fluid mb-3"
+            />
+            <h5 class="text-uppercase fw-bold">Headphones</h5>
+            <a href="#" class="text-decoration-none text-muted"
+              >Shop <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category-card bg-light py-4 rounded">
+            <img
+              src="./assets/shared/desktop/image-category-thumbnail-speakers.png"
+              alt="Speakers"
+              class="img-fluid mb-3"
+            />
+            <h5 class="text-uppercase fw-bold">Speakers</h5>
+            <a href="#" class="text-decoration-none text-muted"
+              >Shop <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="category-card bg-light py-4 rounded">
+            <img
+              src="./assets/shared/desktop/image-category-thumbnail-earphones.png"
+              alt="Earphones"
+              class="img-fluid mb-3"
+            />
+            <h5 class="text-uppercase fw-bold">Earphones</h5>
+            <a href="#" class="text-decoration-none text-muted"
+              >Shop <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZX9 Speaker -->
+    <section
+      class="container zx9-speaker-section text-white d-flex align-items-center my-5 rounded"
+    >
+      <div class="container text-center text-md-start">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img
+              src="./assets/home/desktop/image-speaker-zx9.png"
+              alt="ZX9 Speaker"
+              class="img-fluid mb-4"
+              style="max-height: 400px"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2 class="display-4 fw-bold">ZX9 Speaker</h2>
+            <p class="my-4">
+              Upgrade to premium speakers that are phenomenally built to deliver
+              truly remarkable sound.
+            </p>
+            <a
+              href="product.html?slug=zx9-speaker"
+              class="btn-primary btn-dark px-4"
+              style="background-color: #000; color: white"
+              >See Product</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZX7 Speaker -->
+    <section class="container my-5">
+      <div
+        class="rounded p-5 d-flex justify-content-between align-items-center zx7-speaker-section"
+      >
+        <div>
+          <h3 class="fw-bold mb-4">ZX7 Speaker</h3>
+          <a href="product.html?slug=zx7-speaker" class="btn-outline"
+            >See Product</a
+          >
+        </div>
+        <img
+          src="./assets/home/desktop/image-speaker-zx7.jpg"
+          class="img-fluid d-none d-md-block rounded"
+          style="max-width: 300px"
+          alt="ZX7 Speaker"
+        />
+      </div>
+    </section>
+
+    <!-- YX1 Earphones -->
+    <section class="container my-5">
+      <div class="row g-0 rounded overflow-hidden">
+        <div class="col-md-6">
+          <img
+            src="./assets/home/desktop/image-earphones-yx1.jpg"
+            class="img-fluid w-100 h-100 object-fit-cover"
+            alt="YX1 Earphones"
+          />
+        </div>
+        <div class="col-md-6 d-flex align-items-center bg-light p-5">
+          <div>
+            <h3 class="fw-bold mb-4">YX1 Earphones</h3>
+            <a href="product.html?slug=yx1-earphones" class="btn-outline mt-3"
+              >See Product</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center">
+          <h2 class="fw-bold text-uppercase">
+            Bringing you the <span class="text-warning">best</span> audio gear
+          </h2>
+          <p class="text-muted mt-3">
+            Located at the heart of New York City, Audiophile is the premier
+            store for high-end headphones, earphones, speakers, and audio
+            accessories. We have a large showroom and luxury demonstration rooms
+            available for you to browse and experience a wide range of our
+            products. Visit our store to meet some of the fantastic people who
+            make Audiophile the best place to buy your portable audio equipment.
+          </p>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img
+            src="./assets/shared/desktop/image-best-gear.jpg"
+            class="img-fluid rounded"
+            alt="Best Gear"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Product List -->
+    <!-- <main class="container py-5" id="product-list"> -->
+    <!-- Products is generated here dynamically using via JS -->
+    <!-- </main> -->
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4">
+      <div class="container">
+        <!-- Top Section -->
+        <div class="row align-items-center mb-6">
+          <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+            <a
+              href="index.html"
+              class="text-white text-decoration-none fw-bold fs-4"
+              >audiophile</a
+            >
+          </div>
+
+          <div class="col-md-6 text-md-end">
+            <nav style="text-transform: uppercase; font-size: small">
+              <a href="index.html" class="text-white text-decoration-none mx-2"
+                >Home</a
+              >
+              <a
+                href="headphones.html"
+                class="text-white text-decoration-none mx-2"
+                >Headphones</a
+              >
+              <a
+                href="speakers.html"
+                class="text-white text-decoration-none mx-2"
+                >Speakers</a
+              >
+              <a
+                href="earphones.html"
+                class="text-white text-decoration-none mx-2"
+                >Earphones</a
+              >
+            </nav>
+          </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="row mt-3">
+          <div class="col-md-6 text-md-start footer-text">
+            <p>
+              Audiophile is an all-in-one stop to fulfill your audio needs.
+              We're a small team of music lovers and sound specialists who are
+              devoted to helping you get the most out of personal audio. Come
+              and visit our demo facility — we’re open 7 days a week.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="align-items-bottom">
+              <a href="#" class="text-white text-decoration-none mx-1"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+              <a href="#" class="text-white text-decoration-none mx-1"
+                ><i class="bi bi-twitter fs-5"></i
+              ></a>
+              <a href="#" class="text-white text-decoration-none mx-1"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="row mt-3">
+          <div class="col-md-12 text-md-start footer-text">
+            <p>© 2025 Audiophile. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-end">
+        <div class="modal-content rounded-3 p-4" style="max-width: 420px">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold">
+              Cart (<span id="modal-cart-count">0</span>)
+            </h5>
+            <button
+              type="button"
+              class="btn btn-link text-muted text-decoration-none p-0"
+              id="clear-cart"
+            >
+              Remove all
+            </button>
+          </div>
+          <div class="modal-body p-0">
+            <div
+              id="cart-items-container"
+              class="d-flex flex-column gap-3"
+            ></div>
+          </div>
+          <div class="modal-footer border-0 flex-column align-items-stretch">
+            <div class="d-flex justify-content-between w-100 mb-2">
+              <p class="fw-bold text-uppercase">Total</p>
+              <p class="fw-bold" id="cart-product-total">$0</p>
+            </div>
+            <div class="d-flex justify-content-between w-100 mb-2">
+              <p class="fw-bold text-uppercase">Shipping</p>
+              <p class="fw-bold" id="cart-shipping">$50</p>
+            </div>
+            <div class="d-flex justify-content-between w-100 mb-3">
+              <p class="fw-bold text-uppercase">VAT (Included)</p>
+              <p class="fw-bold" id="cart-vat">$0</p>
+            </div>
+            <div class="d-flex justify-content-between w-100 mb-3">
+              <p class="fw-bold text-uppercase">Grand Total</p>
+              <p class="fw-bold fs-5 text-primary" id="cart-grand-total">$0</p>
+            </div>
+            <a href="checkout.html" class="btn btn-primary text-uppercase w-100"
+              >Checkout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/products.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
