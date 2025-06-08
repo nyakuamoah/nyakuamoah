@@ -15,6 +15,15 @@ footer {
   background-color: var(--clr-dark) !important;
 }
 
+.fixed-bannner {
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 .footer-text p {
   color: var(--clr-gray) !important;
 }
@@ -22,7 +31,24 @@ footer {
   border-bottom: #a9a9a9 1px solid;
   padding: 30px 0;
 }
-.nav-link {
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: -6em;
+}
+
+.navbar-nav > li {
+  margin-right: 15px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  font-size: smaller;
+  color: var(--clr-white) !important;
+}
+
+nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-weight: var(--bs-nav-link-font-weight);
@@ -160,15 +186,11 @@ p {
 
 /* FEATURED SECTIONS */
 .zx9-speaker-section {
-  background-color: var(--clr-primary);
-  background-image: url("../assets/home/desktop/pattern-circles.svg");
+  background-color: #d87d4a;
+  background-image: url("./assets/home/desktop/pattern-circles.svg");
   background-repeat: no-repeat;
-  background-position: right center;
-
-  color: var(--clr-white);
-  border-radius: 10px;
-  padding: 4rem 2rem;
-  overflow: hidden;
+  background-position: center left;
+  border-radius: 1rem;
 }
 
 .zx7-speaker-section {
