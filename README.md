@@ -1,5 +1,4 @@
-Data Analytics, Web Applications & ML Experiments
-
+Azubi Assignment - E-commerce website
 
 <!---
 nyakuamoah/nyakuamoah is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
