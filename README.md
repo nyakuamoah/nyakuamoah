@@ -1,4 +1,4 @@
-Nana Yaw Akuamoah
+Software Development
 
 <!---
 nyakuamoah/nyakuamoah is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
