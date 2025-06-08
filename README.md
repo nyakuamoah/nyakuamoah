@@ -1,4 +1,4 @@
-Azubi Assignment - E-commerce website
+Nana Yaw Akuamoah
 
 <!---
 nyakuamoah/nyakuamoah is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
