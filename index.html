@@ -84,6 +84,10 @@
         background-image: url('./assets/home/desktop/image-hero.jpg');
         background-size: cover;
         background-position: center;
+        overflow: hidden;
+        position: relative;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
       "
     >
       <div class="container text-md-start">
@@ -182,22 +186,31 @@
     </section>
 
     <!-- ZX7 Speaker -->
-    <section class="container my-5">
-      <div
-        class="rounded p-5 d-flex justify-content-between align-items-center zx7-speaker-section"
-      >
-        <div>
-          <h3 class="fw-bold mb-4">ZX7 Speaker</h3>
+    <section
+      class="container"
+      class="rounded justify-content-between align-items-center zx7-speaker-section"
+      style="
+        min-height: 400px;
+        background-image: url('./assets/home/desktop/image-speaker-zx7.jpg');
+        background-size: contain;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        background-attachment: local, scroll;
+        background-repeat: no-repeat;
+        display: flex;
+      "
+    >
+      <div>
+        <div
+          class="rounded p-5 align-items-center"
+          styles="min-height: 400px, padding-top: 100px"
+        >
+          <h3 class="fw-bold mb-4 mt-6">ZX7 Speaker</h3>
           <a href="product.html?slug=zx7-speaker" class="btn-outline"
             >See Product</a
           >
         </div>
-        <img
-          src="./assets/home/desktop/image-speaker-zx7.jpg"
-          class="img-fluid d-none d-md-block rounded"
-          style="max-width: 300px"
-          alt="ZX7 Speaker"
-        />
       </div>
     </section>
 
