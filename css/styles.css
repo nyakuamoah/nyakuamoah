@@ -190,9 +190,9 @@ p {
 /* FEATURED SECTIONS */
 .zx9-speaker-section {
   background-color: #d87d4a;
-  background-image: url("./assets/home/desktop/pattern-circles.svg");
+  background-image: url("../assets/home/desktop/pattern-circles.svg");
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: center;
   border-radius: 1rem;
 }
 
