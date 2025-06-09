@@ -15,7 +15,7 @@ footer {
   background-color: var(--clr-dark) !important;
 }
 
-.fixed-bannner {
+.fixed-banner {
   background-size: cover;
   background-position: center;
   overflow: hidden;
