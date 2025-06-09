@@ -43,9 +43,12 @@ footer {
 .navbar-nav > li {
   margin-right: 15px;
   margin-left: 15px;
+}
+
+.navbar-nav > li > a {
+  color: var(--clr-white) !important;
   text-transform: uppercase;
   font-size: smaller;
-  color: var(--clr-white) !important;
 }
 
 nav-link {
