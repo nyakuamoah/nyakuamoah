@@ -84,8 +84,9 @@ function renderProduct(product) {
           }
         </div>
   
-        <h3 class="text-center text-uppercase mt-4">You may also like</h3>
-        <div class="row text-center g-4">
+        
+        <div class="row text-center g-4 mt-4">
+        <h3 class="text-center text-uppercase">You may also like</h3>
           ${product.others
             .map(
               (other) => `
