@@ -20,6 +20,11 @@ function highlightActiveNav() {
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   highlightActiveNav();
+  if (typeof renderCart === "function") renderCart(); // if cart.js is active
+  if (typeof updateCartModal === "function") updateCartModal(); // if cart.js is active
+  if (typeof syncCartUI === "function") syncCartUI(); // if cart.js is active
+
+  updateCartModal();
 });
 
 // Cart
