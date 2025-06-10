@@ -17,14 +17,26 @@ function highlightActiveNav() {
   });
 }
 
+// Main script to handle cart and navigation
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   highlightActiveNav();
   if (typeof renderCart === "function") renderCart(); // if cart.js is active
   if (typeof updateCartModal === "function") updateCartModal(); // if cart.js is active
   if (typeof syncCartUI === "function") syncCartUI(); // if cart.js is active
+  if (document.getElementById("cart-items-container")) {
+    updateCartModal();
+  }
 
-  updateCartModal();
+  // Add clear-cart button handler
+  const clearBtn = document.getElementById("clear-cart");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      localStorage.removeItem("cart");
+      updateCartCount();
+      updateCartModal();
+    });
+  }
 });
 
 // Cart
