@@ -189,8 +189,8 @@ p {
 
 /* FEATURED SECTIONS */
 .zx9-speaker-section {
-  background-color: #d87d4a;
   background-image: url("../assets/home/desktop/pattern-circles.svg");
+  background-color: #d87d4a;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 1rem;
@@ -531,11 +531,6 @@ p {
 #cart-items-container img {
   width: 64px;
   border-radius: 8px;
-}
-
-#cart-items-container .d-flex {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
 }
 
 .modal-footer p {
