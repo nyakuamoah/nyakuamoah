@@ -72,25 +72,25 @@ function renderProduct(product) {
           ${
             product.gallery.first.desktop
               ? `<div class="col-md-4">
-                <img src=".${product.gallery.first.desktop}" class="img-fluid rounded" />
+                <img src="${product.gallery.first.desktop}" class="img-fluid rounded" />
                </div>
                <div class="col-md-4">
-                <img src=".${product.gallery.second.desktop}" class="img-fluid rounded" />
+                <img src="${product.gallery.second.desktop}" class="img-fluid rounded" />
                </div>
                <div class="col-md-4">
-                <img src=".${product.gallery.third.desktop}" class="img-fluid rounded" />
+                <img src="${product.gallery.third.desktop}" class="img-fluid rounded" />
                </div>`
               : ""
           }
         </div>
   
-        <h3 class="text-center text-uppercase mb-4">You may also like</h3>
+        <h3 class="text-center text-uppercase">You may also like</h3>
         <div class="row text-center g-4">
           ${product.others
             .map(
               (other) => `
             <div class="col-md-4">
-              <img src=".${other.image.desktop}" class="img-fluid mb-3 rounded" alt="${other.name}" />
+              <img src="${other.image.desktop}" class="img-fluid mb-3 rounded" alt="${other.name}" />
               <h5 class="text-uppercase">${other.name}</h5>
               <a href="product.html?slug=${other.slug}" class="btn-primary text-uppercase mt-3">See Product</a>
             </div>
