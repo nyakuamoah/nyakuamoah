@@ -22,7 +22,7 @@ function renderProduct(product) {
         <a href="javascript:history.back()" class="text-muted small d-inline-block mb-3">Go Back</a>
         <div class="row align-items-center mb-5">
           <div class="col-md-6">
-            <img src=".${
+            <img src="${
               product.image.desktop
             }" class="img-fluid rounded" alt="${product.name}" />
           </div>
