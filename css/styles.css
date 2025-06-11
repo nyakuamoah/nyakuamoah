@@ -545,6 +545,13 @@ p {
 
 /* RESPONSIVE VIEWS */
 @media (max-width: 767px) {
+  header,
+  section,
+  footer {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
   /* Typography adjustments */
   h1 {
     font-size: 36px;
