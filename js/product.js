@@ -71,15 +71,13 @@ function renderProduct(product) {
         <div class="row g-4 mb-5">
           ${
             product.gallery.first.desktop
-              ? `<div class="col-md-4">
-                <img src="${product.gallery.first.desktop}" class="img-fluid rounded" />
-               </div>
-               <div class="col-md-4">
-                <img src="${product.gallery.second.desktop}" class="img-fluid rounded" />
-               </div>
-               <div class="col-md-4">
-                <img src="${product.gallery.third.desktop}" class="img-fluid rounded" />
-               </div>`
+              ? `<div class="col-md-5">
+                  <img src="${product.gallery.first.desktop}" class="img-fluid rounded" style="margin-bottom: 1.5rem" /> <br />
+                  <img src="${product.gallery.second.desktop}" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-7">
+                  <img src="${product.gallery.third.desktop}" class="img-fluid rounded" />
+                </div>`
               : ""
           }
         </div>
