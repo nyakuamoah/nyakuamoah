@@ -12,22 +12,19 @@ function renderCart() {
       <h2>Your Cart</h2>
       <div class="table-responsive">
         <table class="table">
-          <thead><tr><th>Product</th><th>Image</th><th>Qty</th><th>Price</th><th></th></tr></thead>
+          <thead><tr><th>Product</th><th>Qty</th><th>Price</th><th></th></tr></thead>
           <tbody>
     `;
 
   cart.forEach((item, index) => {
     subtotal += item.price * item.quantity;
-
-    // ✅ Normalize image path to avoid ./ issue
-    const imagePath = item.image.replace(/^\\.?\\/?/, "/");
-
     cartHTML += `
         <tr>
           <td>${item.name}</td>
-          <td><img src="${imagePath}" alt="${item.name}" style="width: 50px; border-radius: 6px;"></td>
           <td>
-            <input type="number" class="form-control" value="${item.quantity}" min="1"
+            <input type="number" class="form-control" value="${
+              item.quantity
+            }" min="1"
                    onchange="updateQuantity(${index}, this.value)">
           </td>
           <td>$${(item.price * item.quantity).toFixed(2)}</td>
@@ -57,3 +54,26 @@ function renderCart() {
 
   container.innerHTML = cartHTML;
 }
+
+function updateQuantity(index, quantity) {
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  if (quantity < 1) quantity = 1;
+  cart[index].quantity = parseInt(quantity);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+  updateCartModal();
+  updateCartCount();
+}
+
+function removeItem(index) {
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+  updateCartModal();
+  updateCartCount();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderCart();
+});
